@@ -9,7 +9,7 @@ import os
 app = Flask(__name__)
 
 # Set up the Google Generative AI and Gemini Vision Pro configurations
-genai.configure(api_key="AIzaSyDxHEMIcdmMLa7Zd-uiGNffPDP4mUo8bR4")
+genai.configure(api_key=" Google API key")
 
 generation_config = {
     "temperature": 0.05,
@@ -27,7 +27,7 @@ safety_settings = [
 ]
 
 # Set up Gemini Vision Pro API
-GEMINI_VISION_PRO_API_KEY = 'AIzaSyDxHEMIcdmMLa7Zd-uiGNffPDP4mUo8bR4'
+GEMINI_VISION_PRO_API_KEY = 'Google Api Key'
 GEMINI_VISION_PRO_ENDPOINT = 'https://api.geminivisionpro.com/v1/process'
 
 # Folder to save uploads
