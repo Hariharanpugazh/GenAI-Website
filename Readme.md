@@ -47,5 +47,7 @@ bash
 
 📞 Contact
 Hariharan Pugazh
-[LinkedIn] | [Instagram]
-Email: [hariharanpugazh@gmail.com] 
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/hariharan-z)
+[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/harlee28)
+[![Email](https://img.shields.io/badge/Email-white?logo=Gmail&logoColor=black)](hariharanpugazh@gmail.com)
+ 
