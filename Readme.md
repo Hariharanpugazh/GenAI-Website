@@ -23,3 +23,29 @@ To get a local copy up and running, follow these steps:
 1. Clone the repo:
    ```bash
    git clone https://github.com/Hariharanpugazh/GenAI-Website.git
+
+   cd GenAI-Website
+   
+   npm install
+
+   npm start
+
+2. Open your browser and visit http://localhost:3000 to see the application in action!
+
+## Contributions are welcome! Please follow these steps to contribute:
+
+1. Fork the repository.
+2. Create your feature branch:
+
+bash
+    
+    git checkout -b feature/AmazingFeature
+
+    git commit -m 'Add some AmazingFeature'
+
+    git push origin feature/AmazingFeature
+
+📞 Contact
+Hariharan Pugazh
+[LinkedIn] | [Instagram]
+Email: [hariharanpugazh@gmail.com] 
