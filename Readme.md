@@ -1,53 +1,97 @@
-## 🌟 Overview
-GenAI Website is a modern web application designed to showcase the capabilities of generative AI technologies. This project aims to provide users with an interactive platform to explore various AI models, their applications, and how they can be integrated into real-world scenarios.
+# GenAI Tools - Gemini API Integration
 
-## 🛠️ Features
-- **User-Friendly Interface:** An intuitive design that enhances user experience.
-- **Responsive Design:** Optimized for mobile and desktop viewing.
-- **Interactive AI Demonstrations:** Experience the power of generative AI through live demos.
-- **Informative Resources:** Access articles and tutorials related to generative AI.
+A Flask web application that provides AI-powered features using Google's Gemini API, including text generation, image processing, and speech-to-text capabilities.
 
-## 🚀 Technologies Used
-- **Frontend:** 
-  - React.js
-  - Tailwind CSS
-- **Backend:** 
-  - Node.js (if applicable)
-- **APIs:** 
-  - Various AI APIs (please specify if you are using any)
+## Features
 
-## 📦 Installation
+- **Text Generation**: Generate AI responses using Google's Gemini Pro model
+- **Image Processing**: Process and analyze images using Gemini Vision Pro API
+- **Speech Processing**: Convert speech to text and text back to speech
+- **Web Interface**: Clean, responsive web interface for all features
 
-To get a local copy up and running, follow these steps:
+## Technologies Used
 
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/Hariharanpugazh/GenAI-Website.git
+- **Backend**: Flask (Python)
+- **AI Integration**: Google Generative AI (Gemini Pro, Gemini Vision Pro)
+- **Speech Processing**: Google Text-to-Speech (gTTS), SpeechRecognition
+- **Audio Processing**: pydub
+- **Frontend**: HTML, CSS
+- **File Handling**: Pathlib, os
 
-   cd GenAI-Website
-   
-   npm install
+## Installation
 
-   npm start
+1. Clone the repository:
+```bash
+git clone https://github.com/Hariharanpugazh/GenAI-Tools-Gemini-API-.git
+cd GenAI-Tools-Gemini-API-
+```
 
-2. Open your browser and visit http://localhost:3000 to see the application in action!
+2. Install required dependencies:
+```bash
+pip install flask gtts speechrecognition requests google-generativeai pydub
+```
 
-## Contributions are welcome! Please follow these steps to contribute:
+3. Configure API keys:
+   - Obtain a Google Generative AI API key
+   - Update the API key in `app.py`:
+     ```python
+     genai.configure(api_key="your_google_api_key_here")
+     GEMINI_VISION_PRO_API_KEY = 'your_gemini_vision_pro_api_key_here'
+     ```
 
-1. Fork the repository.
-2. Create your feature branch:
+## Usage
 
-bash
-    
-    git checkout -b feature/AmazingFeature
+1. Start the Flask application:
+```bash
+python app.py
+```
 
-    git commit -m 'Add some AmazingFeature'
+2. Open your web browser and navigate to `http://localhost:5000`
 
-    git push origin feature/AmazingFeature
+3. Use the available features:
+   - **Generate Text**: Enter a text prompt to get AI-generated responses
+   - **Process Image**: Upload an image for AI analysis
+   - **Speech Processing**: Upload audio files for speech-to-text conversion
 
-📞 Contact
-Hariharan Pugazh
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/hariharan-z)
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/harlee28)
-[![Email](https://img.shields.io/badge/Email-white?logo=Gmail&logoColor=black)](hariharanpugazh@gmail.com)
- 
+## Project Structure
+
+```
+├── app.py              # Main Flask application
+├── templates/
+│   └── index.html      # Web interface template
+├── static/
+│   └── style.css       # Styling for the web interface
+├── uploads/            # Directory for uploaded files
+└── README.md           # Project documentation
+```
+
+## API Endpoints
+
+- `GET /` - Main page with web interface
+- `POST /generate-text` - Generate text using Gemini Pro
+- `POST /process-image` - Process images using Gemini Vision Pro
+- `POST /speech` - Handle speech-to-text and text-to-speech conversion
+
+## Configuration
+
+The application includes safety settings for content filtering and generation parameters that can be adjusted in `app.py`:
+
+- Temperature: 0.05 (controls randomness)
+- Max output tokens: 1000
+- Safety thresholds for harmful content categories
+
+## Requirements
+
+- Python 3.7+
+- Google Generative AI API access
+- Internet connection for API calls
+
+## Notes
+
+- Ensure you have valid API keys before running the application
+- The application creates an `uploads/` directory for temporary file storage
+- Audio files are converted to WAV format for speech recognition processing
+
+## License
+
+This project is open source and available under the MIT License.
